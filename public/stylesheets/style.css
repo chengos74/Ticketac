@@ -1,46 +1,50 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900&display=swap");
 
-body{
-  height: 100vh;
-  background-image: linear-gradient(to top, #2980B9, #6DD5FA, #FFFFFF);
-  /* font-family: 'Montserrat', sans-serif; */
-  font-family: 'Roboto Flex', sans-serif;
+body {
+    height: 100vh;
+    background-image: linear-gradient(to top, #2980b9, #6dd5fa, #ffffff);
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: "Roboto Flex", sans-serif;
 }
 
 .fa-solid {
-  font-size: 20px;
+    font-size: 20px;
 }
 
-.lasttrip{
-  text-decoration: none;
+.lasttrip {
+    text-decoration: none;
 }
 
-a:link{
-  text-decoration: none;
+a:link {
+    text-decoration: none;
 }
 
-.fond{
-  height: 50%;
+.fond {
+    height: 50%;
 }
 
-.texte{
-  color: #FFFFFF ;
-  padding-top: 50px;
+.texte {
+    color: #ffffff;
+    padding-top: 50px;
 }
-input{
-  padding: 10px 45px;
+input {
+    padding: 10px 45px;
 }
 .btn {
-  margin-left: 45px;
+    margin-left: 45px;
 }
 
 .blockWhite {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between ;
-  background-color: #FFFFFF;
-  margin: 15px;
-  padding: 15px 0px;
-  border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    margin: 15px;
+    padding: 15px 0px;
+    border-bottom: 1px solid black;
+}
+
+tbody tr {
+    padding-top: 15px;
 }
