@@ -27,15 +27,35 @@ router.post('/sign-up', (req,res,next) => {
   res.render('homePage');
 });
 
-// GET Destination page
-router.post('/go', (req,res,next) => {
 
-  //. Afficher les destinations disponibles 
-if(true){
-  res.render('trainList'); // il y a des trains disponibles
-}else{
-  res.render('noTrain'); // il n'y a pas de trains
-}
+// GET Destination page
+router.post('/go', async (req,res,next) => {
+
+  var trainList = await trainsModel.find(); // récupérer la liste des trains en bdd
+
+  var departure = req.body.departure; // départ entré par l'utilisateur
+  var arrival = req.body.arrival; // arrivée entré par l'utilisateur
+
+  var journeyIsValid = false;
+
+  for(var i = 0; i < trainList.length; i++){
+
+    if(departure == trainList[i].departure && arrival == trainList[i].arrival){
+      journeyIsValid = true;
+      console.log(journeyIsValid);
+    }
+  }
+  // console.log("Search: "+ req.body.arrival);
+  // console.log("Search: "+ req.body.date);
+
+  // Afficher les destinations disponibles 
+
+    if(journeyIsValid){
+      res.render('trainList'); // il y a des trains disponibles
+    }
+    // else{
+    //   res.render('noTrain'); // il n'y a pas de trains
+    // }
 });
 
 // Error page : il n'y a pas de train. On redirige l'utilateur sur la home page quand il clique le bouton

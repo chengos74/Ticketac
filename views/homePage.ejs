@@ -20,15 +20,15 @@
       <div class="texte">
         <h3>One-way ticket :</h3>
       </div>
-        <form action="" method="post" class="text-center">
-            <input type="text" name="" placeholder="From: Paris, Marseille...">
-            <input type="text" name="" placeholder="To: Lille, Nantes...">
+        <form action="/go" method="post" class="text-center">
+            <input type="text" name="departure" placeholder="From: Paris, Marseille...">
+            <input type="text" name="arrival" placeholder="To: Lille, Nantes...">
 
             <label for="start"></label>
-            <input type="date" id="start" name=""
+            <input type="date" id="start" name="date"
                   value="2022-06-30"
                   min="2022-01-01" max="2023-12-31">
-            <a href="" class="btn btn-danger p-3">Go</a>
+            <button type="submit" class="btn btn-danger p-3">Go</button>
         </form>
         <div class="fond text-center mt-5">
           <img src="/images/landmark.png" height="355px" alt="landmark">
