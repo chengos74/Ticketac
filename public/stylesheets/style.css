@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900&display=swap');
+
 body{
   height: 100vh;
   background-image: linear-gradient(to top, #2980B9, #6DD5FA, #FFFFFF);
+  /* font-family: 'Montserrat', sans-serif; */
+  font-family: 'Roboto Flex', sans-serif;
 }
 
 .fa-solid {
@@ -8,5 +12,9 @@ body{
 }
 
 .lasttrip{
+  text-decoration: none;
+}
+
+a:link{
   text-decoration: none;
 }
