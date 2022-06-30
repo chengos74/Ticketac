@@ -33,3 +33,14 @@ input{
 .btn {
   margin-left: 45px;
 }
+
+.blockWhite {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between ;
+  background-color: #FFFFFF;
+  margin: 15px;
+  padding: 15px 0px;
+  border-bottom: 1px solid black;
+}
