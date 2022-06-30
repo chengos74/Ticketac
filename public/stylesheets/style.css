@@ -1,8 +1,12 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+body{
+  height: 100vh;
+  background-image: linear-gradient(to top, #2980B9, #6DD5FA, #FFFFFF);
 }
 
-a {
-  color: #00B7FF;
+.fa-solid {
+  font-size: 20px;
+}
+
+.lasttrip{
+  text-decoration: none;
 }
