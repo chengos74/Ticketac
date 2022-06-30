@@ -17,27 +17,21 @@
 <!--Recherche-->
 <div class="container">
     <div class="row">
+
       <div class="texte">
-        <h3>Ticket available on 02/08 :</h3>
+        <h3>Ticket available on <%= date %> :</h3>
       </div>
-      <div class="blockWhite">
-        <div class="ville">Paris/Lille</div>
-        <div class="heure">train departure at : 13:00 pm</div>
-        <div class="prix">93 €</div>
-        <div class="prix"><a href="" class="btn btn-primary">GO</a></div>
-      </div>
-      <div class="blockWhite">
-        <div class="ville">Paris/Lille</div>
-        <div class="heure">train departure at : 17:00 pm</div>
-        <div class="prix">99 €</div>
-        <div class="prix"><a href="" class="btn btn-primary">GO</a></div>
-      </div>
-      <div class="blockWhite">
-        <div class="ville">Paris/Lille</div>
-        <div class="heure">train departure at : 22:00 pm</div>
-        <div class="prix">78 €</div>
-        <div class="prix"><a href="" class="btn btn-primary">GO</a></div>
-      </div>
+
+      <%
+        for(var i = 0; i < trainList.length; i++){ %>
+            <div class="blockWhite">
+              <div class="ville"><%= trainList[i].departure %>/ <%= trainList[i].arrival %></div>
+              <div class="heure">train departure at : <%= trainList[i].departureTime %></div>
+              <div class="prix"><%= trainList[i].price %> €</div>
+              <div class="prix"><a href="" class="btn btn-primary">GO</a></div>
+            </div>
+       <% } %>
+
     </div>
 </div>
 
