@@ -13,6 +13,12 @@ router.get('/', function(req, res, next) {
   res.render('login', { });
 });
 
+// Home page
+router.get('/homePage', (req,res,next) => {
+
+  res.render('homePage');
+});
+
 // GET Destination page
 router.post('/go', (req,res,next) => {
 
