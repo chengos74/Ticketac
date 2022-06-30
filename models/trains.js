@@ -2,12 +2,11 @@ var mongoose = require('mongoose');
 
 
 var trainsSchema = mongoose.Schema({
-  num: Number,
-  departueCity: String,
-  arrivalCity: String,
+  departure: String,
+  arrival: String,
   date: Date,
-  departureTime: Date,
-  price: Number
+  departureTime: String,
+  price: Number,
 });
 
 

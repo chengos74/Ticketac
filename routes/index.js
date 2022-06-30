@@ -3,6 +3,8 @@ var router = express.Router();
 
 const mongoose = require('mongoose');
 
+var trainsModel = require('../models/trains');
+
 var city = ["Paris","Marseille","Nantes","Lyon","Rennes","Melun","Bordeaux","Lille"]
 var date = ["2018-11-20","2018-11-21","2018-11-22","2018-11-23","2018-11-24"]
 
@@ -62,7 +64,7 @@ router.get('/newSearch', (req,res,next) => {
 // Remplissage de la base de donnée, une fois suffit
 router.get('/save', async function(req, res, next) {
 
-  // How many journeys we want
+  // How many trains we want
   var count = 300
 
   // Save  ---------------------------------------------------
@@ -73,7 +75,7 @@ router.get('/save', async function(req, res, next) {
 
     if(departureCity != arrivalCity){
 
-      var newUser = new journeyModel ({
+      var newUser = new trainsModel ({
         departure: departureCity , 
         arrival: arrivalCity, 
         date: date[Math.floor(Math.random() * Math.floor(date.length))],
@@ -97,12 +99,12 @@ router.get('/result', function(req, res, next) {
   // Permet de savoir combien de trajets il y a par ville en base
   for(i=0; i<city.length; i++){
 
-    journeyModel.find( 
+    trainsModel.find( 
       { departure: city[i] } , //filtre
   
-      function (err, journey) {
+      function (err, trains) {
 
-          console.log(`Nombre de trajets au départ de ${journey[0].departure} : `, journey.length);
+          console.log(`Nombre de trajets au départ de ${trains[0].departure} : `, trains.length);
       }
     )
 
