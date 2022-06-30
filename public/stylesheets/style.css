@@ -18,3 +18,18 @@ body{
 a:link{
   text-decoration: none;
 }
+
+.fond{
+  height: 50%;
+}
+
+.texte{
+  color: #FFFFFF ;
+  padding-top: 50px;
+}
+input{
+  padding: 10px 45px;
+}
+.btn {
+  margin-left: 45px;
+}
