@@ -8,7 +8,7 @@ var options = {
 }
 
 //Mongoose connect
-mongoose.connect('mongodb+srv://Mathieu33333:oief4623ERT@cluster0.rxgkpre.mongodb.net/ticketac', 
+mongoose.connect('mongodb+srv://Mathieu33333:oief4623ERT@cluster0.rxgkpre.mongodb.net/Ticketac?retryWrites=true&w=majority', 
     options,
     function (err) {
           if (err) {
