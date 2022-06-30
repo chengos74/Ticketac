@@ -14,7 +14,13 @@ router.get('/', function(req, res, next) {
 });
 
 // Home page
-router.get('/homePage', (req,res,next) => {
+router.post('/sign-in', (req,res,next) => {
+
+  res.render('homePage');
+});
+
+// Home page
+router.post('/sign-up', (req,res,next) => {
 
   res.render('homePage');
 });
