@@ -69,9 +69,14 @@ router.get('/changeDestination', (req, res, next) => {
 })
 
 // Panier: l'utilsateur à ajouter un train au panier
-router.get('/basket', (req, res, next) => {
-
-  res.render('basket')
+router.get('/basket', async (req, res, next) => {
+  var trainList = await trainsModel.findById(req.query.id);
+  // req.session.id = req.query.id;
+  console.log(trainList);
+  var date = req.query.date;
+  console.log(date);
+  
+  res.render('basket', {trainList, date})
 });
 
 

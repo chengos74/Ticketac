@@ -6,13 +6,20 @@ var logger = require('morgan');
 
 require('./models/connection.js');
 
-
+var session = require("express-session");
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var models = require('./routes/index')
 
 var app = express();
 
+app.use( 
+session({ 
+secret: 'ticketac', 
+resave: false, 
+saveUninitialized: false, 
+}) 
+); 
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
