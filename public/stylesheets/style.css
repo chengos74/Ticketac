@@ -7,6 +7,21 @@ body {
     font-family: "Roboto Flex", sans-serif;
 }
 
+/* login body */
+header {
+    background-image: url(/images/fondsoleil_encore_mieux.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.blocblanc{
+    background-color: rgba(255, 255, 255, 0.20) !important;
+    backdrop-filter: blur(15px);
+    border: none !important;
+}
+
+
 .fa-solid {
     font-size: 20px;
 }

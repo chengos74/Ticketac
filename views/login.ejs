@@ -11,59 +11,61 @@
 
   </head>
   <body>
-<!--navbar-->
-<%- include('navbar'); %> 
-
-<!--Formulaire-->
-<div class="container">
-  <div class="row">
-    <div class="col-12 col-md-6 mt-5">
-      <div class="card">
-        <div class="signin text-center">
-          <h2>Sign-In</h2>
+    <header>
+      <!--navbar-->
+      <%- include('navbarlogin'); %> 
+      
+      <!--Formulaire-->
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md-6 mt-5">
+              <div class="card blocblanc">
+                <div class="signin text-center">
+                  <h2 class="text-white">Sign-In</h2>
+                </div>
+                <form action="users/signIn" method="post">
+                  <div class="mb-3 card-body">
+                    <input type="email" name="email" class="form-control blocblanc" id="exampleFormControlInput1" placeholder="Email">
+                  </div>
+                  <div class="mb-3 card-body">
+                    <input type="password" name="password" class="form-control blocblanc" id="exampleFormControlInput1" placeholder="Password">
+                  </div>
+                  <div class="chercher text-center mb-4">
+                    <button type="submit" class="btn btn-danger">Se connecter</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 mt-5">
+              <div class="card blocblanc">
+                <div class="signin text-center">
+                  <h2 class="text-white">Sign-Up</h2>
+                </div>
+                <form action="/users/signUp" method="post" class="loginform">
+                    <div class="mb-3 card-body">
+                      <input type="text" name="firstName" class="form-control blocblanc" id="exampleFormControlInput1" placeholder="FirstName" required>
+                    </div>
+                    <div class="mb-3 card-body">
+                      <input type="text" name="lastName" class="form-control blocblanc" id="exampleFormControlInput1" placeholder="LastName" required>
+                    </div>
+                    <div class="mb-3 card-body">
+                      <input type="email" name="email" class="form-control blocblanc" id="exampleFormControlInput1" placeholder="email" required>
+                    </div>
+                    <div class="mb-3 card-body">
+                      <input type="password" name="password" class="form-control blocblanc" id="exampleFormControlInput1" placeholder="Password" required>
+                    </div>
+                    <div class="chercher text-center mb-4">
+                      <button type="submit" class="btn btn-danger">S'incrire</button>
+                    </div>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
-        <form action="users/signIn" method="post">
-          <div class="mb-3 card-body">
-            <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="Email">
-          </div>
-          <div class="mb-3 card-body">
-            <input type="password" name="password" class="form-control" id="exampleFormControlInput1" placeholder="Password">
-          </div>
-          <div class="chercher text-center mb-4">
-            <button type="submit" class="btn btn-danger">Se connecter</button>
-          </div>
-        </form>
-      </div>
-    </div>
-    <div class="col-12 col-md-6 mt-5">
-      <div class="card">
-        <div class="signin text-center">
-          <h2>Sign-Up</h2>
-        </div>
-        <form action="/users/signUp" method="post">
-            <div class="mb-3 card-body">
-              <input type="text" name="firstName" class="form-control" id="exampleFormControlInput1" placeholder="FirstName" required>
-            </div>
-            <div class="mb-3 card-body">
-              <input type="text" name="lastName" class="form-control" id="exampleFormControlInput1" placeholder="LastName" required>
-            </div>
-            <div class="mb-3 card-body">
-              <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="email" required>
-            </div>
-            <div class="mb-3 card-body">
-              <input type="password" name="password" class="form-control" id="exampleFormControlInput1" placeholder="Password" required>
-            </div>
-            <div class="chercher text-center mb-4">
-              <button type="submit" class="btn btn-danger">S'incrire</button>
-            </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!--footer-->
-<%- include('footer'); %>
+      
+      <!--footer-->
+      <%- include('footerlogin'); %>
+    </header>
 
 <!--boostrap script-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
