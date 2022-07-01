@@ -35,11 +35,11 @@ router.get('/homePage', (req, res, next) => {
 // GET Destination page
 router.post('/go', async (req, res, next) => {
 
-  var trainList = await trainsModel.find({ departure: req.body.departure, arrival: req.body.arrival, date: req.body.date}); // récupérer la liste des trains en bdd
-
-  var departure = req.body.departure; // départ entré par l'utilisateur
-  var arrival = req.body.arrival; // arrivée entré par l'utilisateur
+  var departure = req.body.departure.charAt([0]).toUpperCase() + req.body.departure.substr(1).toLowerCase() ; // départ entré par l'utilisateur
+  var arrival = req.body.arrival.charAt([0]).toUpperCase() + req.body.arrival.substr(1).toLowerCase(); // arrivée entré par l'utilisateur
   var date = req.body.date;
+
+  var trainList = await trainsModel.find({ departure: departure, arrival: arrival, date: req.body.date}); // récupérer la liste des trains en bdd
   
   var journeyIsValid = false;
 
