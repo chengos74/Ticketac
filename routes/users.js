@@ -3,7 +3,10 @@ var router = express.Router();
 
 var usersModel = require('../models/users');
 
+
+
 // Sign-up route
+
 router.post('/signUp', async function (req, res, next){
 
 	console.log("req.body "+ req.body.firstName);
@@ -32,7 +35,10 @@ router.post('/signUp', async function (req, res, next){
 	}
 });
 
+
+
 // Sign-in route
+
 router.post('/signIn', async function (req, res) {
 
 	var userSignedIn = await usersModel.findOne({
@@ -52,10 +58,14 @@ router.post('/signIn', async function (req, res) {
 });
 
 
+
 // Log out route
+
 router.get('/logout', function (req, res) {
 	req.session.user = null;
 	res.render('login');
 })
+
+
 
 module.exports = router;
