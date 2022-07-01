@@ -16,15 +16,15 @@ router.get('/', function (req, res, next) {
   res.render('login', {});
 });
 
-// Home page from sign-IN
-router.post('/sign-in', (req, res, next) => {
-  res.redirect('/homePage');
-});
+// // Home page from sign-IN
+// router.post('/sign-in', (req, res, next) => {
+//   res.redirect('/homePage');
+// });
 
-// Home page from sign-UP
-router.post('/sign-up', (req, res, next) => {
-  res.redirect('/homePage');
-});
+// // Home page from sign-UP
+// router.post('/sign-up', (req, res, next) => {
+//   res.redirect('/homePage');
+// });
 
 // GET Home page 
 router.get('/homePage', (req, res, next) => {
