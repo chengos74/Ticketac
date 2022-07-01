@@ -54,21 +54,22 @@
           Confirm
         </button>
 
-<!-- Modal -->
-  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <!-- <img src="/images/groot.jpg" alt="groot">-->
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Votre voyage : <%=trainList.departure%> / <%=trainList.arrival%></h5>
+          <h5 class="modal-title text-white" id="staticBackdropLabel">Votre voyage : <%=trainList.departure%> / <%=trainList.arrival%></h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
-          Vous partez le <%= date %> à <%=trainList.departureTime%> pour <%=trainList.arrival%>. 
+        <div class="modal-body text-center text-white">
+          Vous partez le <%= date %> à <%=trainList.departureTime%> pour <%=trainList.arrival%>.<br>
           Nous vous souhaitons un agréable voyage
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary"><a href="/homePage">Retour</a></button>
+          <a href="/homePage"><button type="button" class="btn btn-danger">Retour</button></a>
         </div>
       </div>
     </div>
