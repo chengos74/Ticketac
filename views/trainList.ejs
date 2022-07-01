@@ -28,12 +28,13 @@
               <div class="ville"><%= trainList[i].departure %>/ <%= trainList[i].arrival %></div>
               <div class="heure">train departure at : <%= trainList[i].departureTime %></div>
               <div class="prix"><%= trainList[i].price %> €</div>
-              <div class="prix"><a href="" class="btn btn-primary">GO</a></div>
+              <div class="prix"><a href="/basket?id=<%=trainList[i]._id%>&villedepart=<%=trainList[i].departure%>&villearrive=<%=trainList[i].arrival%>&heure=<%=trainList[i].departureTime%>&prix=<%=trainList[i].price%>&date=<%=date%>" class="btn btn-primary">GO</a></div>
             </div>
        <% } %>
 
     </div>
 </div>
+
 
 
 <!--footer-->
