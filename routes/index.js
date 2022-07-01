@@ -57,6 +57,12 @@ router.post('/go', async (req, res, next) => {
   }
 });
 
+// GET LastTrip page
+router.get('/trip', (req, res, next) => {
+
+  res.render('lastTrip');
+});
+
 // Error page : il n'y a pas de train. On redirige l'utilateur sur la home page quand il clique le bouton
 router.get('/changeDestination', (req, res, next) => {
   res.redirect('/homePage');

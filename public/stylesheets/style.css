@@ -2,7 +2,7 @@
 
 body {
     height: 100vh;
-    background-image: linear-gradient(to top, #2980b9, #6dd5fa, #ffffff);
+    background-image: linear-gradient(to top, #2980b9, #ACCCE5);
     /* font-family: 'Montserrat', sans-serif; */
     font-family: "Roboto Flex", sans-serif;
 }
@@ -47,4 +47,8 @@ input {
 
 tbody tr {
     padding-top: 15px;
+}
+
+.droite{
+    text-align: right;
 }
